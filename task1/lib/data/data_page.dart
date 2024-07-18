@@ -1,6 +1,27 @@
 import 'package:flutter/material.dart';
+class Models extends StatelessWidget{//class to difine mosels
+  const Models({
+    required this.title,
+    required this.data,
+    required this.HR_AVG,
+    required this.sp_AVG,
+    required this.sprint,
+    required this.dis,
+  });
+  final String title;
+  final String data;
+  final String HR_AVG;
+  final String sp_AVG;
+  final String sprint;
+  final String dis;
 
-class  _ArticleDescription extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+}
+class  _ArticleDescription extends StatelessWidget {// class to difine how models will show
   const _ArticleDescription({
     required this.title,
     required this.data,
@@ -41,16 +62,13 @@ class  _ArticleDescription extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
           ],
         ),
         const Spacer(),
         const Padding(padding: EdgeInsets.only(bottom: 6.0)),
         Row(
           children: [
-            // Expanded(
             Text('HR AVG :$HR_AVG % | spAVG :$sp_AVG m| sprint:$sprint | dis :$dis km', style: const TextStyle(fontSize: 11.0,color: Colors.black ) ,),
-            // ),
           ],
         ),
         const Row(

@@ -11,11 +11,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           useMaterial3: true,
         ),
-        home: const MyHomePage(title: 'انتخاب بازیکن ')
+        home:  MyHomePage(title: '',)
     );
   }
 }
@@ -42,21 +41,18 @@ List user=[
   User( 'پویان پرورش',   '1403/1/3',   '50', '5', '8' ,  '10'),
   User( 'پویان پرورش',   '1403/1/2',   '50', '5', '8' ,  '10'),
 
-
 ];
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-class _MyHomePageState extends State<MyHomePage> {
 
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title:Text('                                     : انتخاب بازیکن ',style: TextStyle(fontSize: 25,color: Colors.black),),
@@ -91,7 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 dis :user[index].dis
             ),
           );
-        },),
+        },
+      ),
     );// This trailing comma makes auto-formatting nicer for build methods.
   }
 
